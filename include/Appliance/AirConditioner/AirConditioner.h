@@ -32,7 +32,7 @@ class AirConditioner : public ApplianceBase {
   float getOutdoorTemp() const { return this->m_outdoorTemp; }
   float getIndoorHum() const { return this->m_indoorHumidity; }
   float getPowerUsage() const { return this->m_powerUsage; }
-  bool getDefrosting() const { return this->m_defrosting; }
+  bool isDefrosting() const { return this->m_isDefrosting; }
   Mode getMode() const { return this->m_mode; }
   SwingMode getSwingMode() const { return this->m_swingMode; }
   FanMode getFanMode() const { return this->m_fanMode; }
@@ -60,7 +60,7 @@ class AirConditioner : public ApplianceBase {
   Preset m_lastPreset{Preset::PRESET_NONE};
   StatusData m_status{};
   bool m_sendControl{};
-  bool m_defrosting{};
+  bool m_isDefrosting{};
 };
 
 }  // namespace ac
