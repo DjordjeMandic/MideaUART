@@ -112,6 +112,8 @@ class StatusData : public FrameData {
     this->m_setMask(1, state, 64);
   }
 
+  bool getDefrosting() const { return this->m_getValue(16) == 25; }
+
   bool isFahrenheits() const { return this->m_getValue(10, 4); }
   void setFahrenheits(bool state) { this->m_setMask(10, state, 4); }
 

@@ -218,6 +218,7 @@ ResponseStatus AirConditioner::m_readStatus(FrameData data) {
   setProperty(this->m_indoorTemp, newStatus.getIndoorTemp(), hasUpdate);
   setProperty(this->m_outdoorTemp, newStatus.getOutdoorTemp(), hasUpdate);
   setProperty(this->m_indoorHumidity, newStatus.getHumiditySetpoint(), hasUpdate);
+  setProperty(this->m_defrosting, newStatus.getDefrosting(), hasUpdate);
   if (hasUpdate)
     this->sendUpdate();
   return ResponseStatus::RESPONSE_OK;
